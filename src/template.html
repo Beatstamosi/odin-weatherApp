@@ -6,12 +6,69 @@
     <title>Weather App</title>
   </head>
   <body>
-    <form action="">
+    <!-- <form action="">
       <div>
         <label for="location">Location:</label>
         <input type="text" name="location" id="location" />
         <button type="submit" id="get-weather">Get Weather</button>
       </div>
-    </form>
+    </form> -->
+    <div class="grid-container">
+        <div class="content-left">
+            <div>
+                <h2 class="location">London, United Kingdom</h2>
+                <p class="datetime-today">April 1st</p>
+            </div>
+            <img src="icons/clear-day.png" id="weather-icon-day">
+            <div class="container-info1-today">
+                <p class="temperature-today">14.5°</p>
+                <p class="weather-condition-today">Overcast</p>
+            </div>
+            <div class="container-info2-today">
+                <div class="info2-details" id="info2-column1-row1">
+                    <div class="info2-icon">
+                        <img src="icons/tshirt.png">
+                    </div>
+                    <div>
+                        <p class="info2-details-header">Feels like</p>
+                        <p class="info2-details-text">13.9°</p>
+                    </div>
+                </div>
+
+                <div class="info2-details" id="info2-column2-row1">
+                    <div class="info2-icon">
+                        <img src="icons/wind.png">
+                    </div>
+                    <div>
+                        <p class="info2-details-header">Wind Speed</p>
+                        <p class="info2-details-text">3.9 km/h</p>
+                    </div>
+                </div>
+
+                <div class="info2-details" id="info2-column1-row2">
+                    <div class="info2-icon">
+                        <img src="icons/visibility.png">
+                    </div>
+                    <div>
+                        <p class="info2-details-header">Visibility</p>
+                        <p class="info2-details-text">20m</p>
+                    </div>
+                </div>
+
+                <div class="info2-details" id="info2-column2-row2">
+                    <div class="info2-icon">
+                        <img src="icons/humidity.png">
+                    </div>
+                    <div>
+                        <p class="info2-details-header">Humidity</p>
+                        <p class="info2-details-text">80%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-right">
+
+        </div>
+    </div>
   </body>
 </html>
