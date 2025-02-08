@@ -19,5 +19,7 @@ export default async function fetchWeatherData(location) {
 
 function processWeatherData(data) {
     return {"location": data.resolvedAddress, "days": data.days }
+
+    // format to location, today, upcoming days
 }
 
