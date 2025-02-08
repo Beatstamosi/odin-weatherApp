@@ -48,7 +48,7 @@ export default function renderInfo(data) {
     displayPrecipTotal.textContent = `${data.today.precip}mm`;
 
     const displayUVIndex = document.querySelector("#display-uv-index");
-    let UVIndex = data.today.uvindex ? data.today.uvindex !== "0" : "1";
+    let UVIndex = data.today.uvindex !== "0" ? data.today.uvindex : "1";
     let UVIndexIconName = `uv-index-${UVIndex}`;
     setIcon(UVIndexIconName, displayUVIndex);
 
