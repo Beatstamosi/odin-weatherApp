@@ -208,8 +208,9 @@ body {
 }
 
 .headline-weekly-forecast h2, .headline-details-today h2 {
-  font-size: 1.5em;
+  font-size: 1em;
   color: var(--grey);
+  padding-top: 10px;
 }
 
 .container-weekly-forecast {
@@ -283,10 +284,10 @@ body {
 }
 
 .container-details-today img {
-  width: 150px;
+  width: 100px;
 }
 
 .info-text-today-details {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
 }
