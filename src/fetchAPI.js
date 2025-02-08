@@ -20,6 +20,6 @@ export default async function fetchWeatherData(location) {
 }
 
 function processWeatherData(data) {
-    return { "location": data.resolvedAddress, "today": data.days[0], "forecast": data.days.slice(2, 9) };
+    return { "location": data.resolvedAddress, "today": data.days[0], "forecast": data.days.slice(1, 8) };
 }
 

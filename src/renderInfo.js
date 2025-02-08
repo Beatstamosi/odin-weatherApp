@@ -98,13 +98,13 @@ function renderWeeklyForecast(forecast) {
 }
 
 function getWeekday(datetime) {
-    let date = new Date(datetime);
+    let date = new Date(datetime + 'T00:00:00');
     const options = { weekday: 'long'};
     return date.toLocaleDateString("en-US", options);
 }
 
 function formatDate(dateString) {
-    const date = new Date(dateString);
+    const date = new Date(dateString + 'T00:00:00');
     const options = { month: 'long', day: '2-digit' };
     return date.toLocaleDateString('en-US', options);
   }
