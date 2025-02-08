@@ -10,13 +10,13 @@
     <div class="grid-container">
         <div class="content-left">
             <div>
-                <h2 class="location">London, United Kingdom</h2>
-                <p class="datetime-today">April 1st</p>
+                <h2 class="location" id="location-display"></h2>
+                <p class="datetime-today" id="date-display">April 1st</p>
             </div>
             <img src="icons/clear-day.png" id="weather-icon-day">
             <div class="container-info1-today">
-                <p class="temperature-today">14.5°</p>
-                <p class="weather-condition-today">Overcast</p>
+                <p class="temperature-today" id="temperature-display"></p>
+                <p class="weather-condition-today" id="condition-display"></p>
             </div>
             <div class="container-info2-today">
                 <div class="info2-details" id="info2-column1-row1">
@@ -25,7 +25,7 @@
                     </div>
                     <div>
                         <p class="info2-details-header">Feels like</p>
-                        <p class="info2-details-text">13.9°</p>
+                        <p class="info2-details-text" id="display-feels-like"></p>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                     </div>
                     <div>
                         <p class="info2-details-header">Wind Speed</p>
-                        <p class="info2-details-text">3.9 km/h</p>
+                        <p class="info2-details-text" id="display-wind-speed"></p>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
                     </div>
                     <div>
                         <p class="info2-details-header">Visibility</p>
-                        <p class="info2-details-text">20m</p>
+                        <p class="info2-details-text" id="display-visibility"></p>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@
                     </div>
                     <div>
                         <p class="info2-details-header">Humidity</p>
-                        <p class="info2-details-text">80%</p>
+                        <p class="info2-details-text" id="display-humidity"></p>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
             <div class="container-menu">
                 <div class="container-search-bar">
                     <img src="icons/search.svg" alt="">
-                    <input type="text" name="location" id="location" placeholder="Search for location..." />
+                    <input type="text" name="location" id="location-search" placeholder="Search for location..." />
                     <button type="submit" id="get-weather"></button>
                 </div>
 
@@ -85,77 +85,7 @@
                 <h2>Weekly Forecast</h2>
             </div>
 
-            <div class="container-weekly-forecast">
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-
-                <div class="container-weekly-forecast-info">
-                    <p class="weekday">Tuesday</p>
-                    <p class="datetime">April 2nd</p>
-                    <img src="icons/cloudy.png" class="weather-icon-weekly">
-                    <div class="temperatures-weekly">
-                        <p class="temperature-weekly-max">18.5°</p>
-                        <p class="temperature-weekly-min">12.5°</p>
-                    </div>
-                </div>
-            </div>
+            <div id="container-weekly-forecast"></div>
 
             <div class="headline-details-today">
                 <h2>Details for Today</h2>
@@ -165,22 +95,22 @@
                 <div class="container-details-today">
                     <p class="details-today-header">Sunrise</p>
                     <img src="icons/sunrise.png">
-                    <p class="info-text-today-details">18:54</p>
+                    <p class="info-text-today-details" id="display-sunrise"></p>
                 </div>
                 <div class="container-details-today">
                     <p class="details-today-header">Sunset</p>
                     <img src="icons/sunset.png">
-                    <p class="info-text-today-details">5:10</p>
+                    <p class="info-text-today-details" id="display-sunset"></p>
                 </div>
                 <div class="container-details-today">
                     <p class="details-today-header">Highest Temperature</p>
                     <img src="icons/thermometer-warmer.png">
-                    <p class="info-text-today-details">34°</p>
+                    <p class="info-text-today-details" id="display-highest-temp"></p>
                 </div>
                 <div class="container-details-today">
                     <p class="details-today-header">Lowest Temperature</p>
                     <img src="icons/thermometer-colder.png">
-                    <p class="info-text-today-details">15°</p>
+                    <p class="info-text-today-details" id="display-lowest-temp"></p>
                 </div>
             </div>
 
@@ -188,20 +118,20 @@
                 <div class="container-details-today">
                     <p class="details-today-header">Precipation Probability</p>
                     <img src="icons/raindrop.png">
-                    <p class="info-text-today-details">5%</p>
+                    <p class="info-text-today-details" id="display-precip-prob"></p>
                 </div>
                 <div class="container-details-today">
                     <p class="details-today-header">Total Precipation </p>
                     <img src="icons/raindrops.png">
-                    <p class="info-text-today-details">50mm</p>
+                    <p class="info-text-today-details" id="display-precip-total"></p>
                 </div>
                 <div class="container-details-today">
                     <p class="details-today-header">UV Index</p>
-                    <img src="icons/uv-index-3.png">
+                    <img src="icons/uv-index-1.png" id="display-uv-index">
                 </div>
                 <div class="container-details-today">
-                    <p class="details-today-header">Info:</p>
-                    <p class="info-text-today-description">Partly cloudy throughout the day with a chance of rain throughout the day.</p>
+                    <p class="details-today-header">Info</p>
+                    <p class="info-text-today-description" id="display-description"></p>
                 </div>
             </div>
         </div>

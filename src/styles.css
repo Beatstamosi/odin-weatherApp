@@ -28,6 +28,7 @@ body {
   grid-template-rows: 0.5fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .content-right {
@@ -46,16 +47,21 @@ body {
   font-size: 1.3em;
   font-weight: 600;
   justify-self: center;
+  text-wrap: wrap;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .datetime-today {
   justify-self: center;
   padding-top: 10px;
   color: var(--grey);
+  text-align: center;
 }
 
 .container-info1-today {
   justify-self: center;
+  text-align: center;
 }
 
 .temperature-today {
@@ -141,7 +147,6 @@ body {
 .container-menu {
   display: flex;
   justify-content: space-between;
-  height: fit-content;
 }
 
 .container-search-bar {
@@ -156,14 +161,14 @@ body {
   grid-row: 1;
 }
 
-#location {
+#location-search {
   border: none;
   width: 400px;
   font-size: 1em;
   font-family: 'Courier New', Courier, monospace;
 }
 
-#location:focus {
+#location-search:focus {
   outline: none;
 }
 
@@ -213,7 +218,7 @@ body {
   padding-top: 10px;
 }
 
-.container-weekly-forecast {
+#container-weekly-forecast {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 10px;
@@ -291,3 +296,5 @@ body {
   font-size: 1.5em;
   font-weight: bold;
 }
+
+
