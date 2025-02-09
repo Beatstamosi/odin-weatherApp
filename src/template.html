@@ -6,135 +6,139 @@
     <title>Weather App</title>
   </head>
   <body>
-    
     <div class="grid-container">
-        <div class="content-left">
+      <div class="content-left">
+        <div>
+          <h2 class="location" id="location-display"></h2>
+          <p class="datetime-today" id="date-display">April 1st</p>
+        </div>
+        <img src="icons/clear-day.png" id="weather-icon-day" />
+        <div class="container-info1-today">
+          <p class="temperature-today" id="temperature-display"></p>
+          <p class="weather-condition-today" id="condition-display"></p>
+        </div>
+        <div class="container-info2-today">
+          <div class="info2-details" id="info2-column1-row1">
+            <div class="info2-icon">
+              <img src="icons/tshirt.png" />
+            </div>
             <div>
-                <h2 class="location" id="location-display"></h2>
-                <p class="datetime-today" id="date-display">April 1st</p>
+              <p class="info2-details-header">Feels like</p>
+              <p class="info2-details-text" id="display-feels-like"></p>
             </div>
-            <img src="icons/clear-day.png" id="weather-icon-day">
-            <div class="container-info1-today">
-                <p class="temperature-today" id="temperature-display"></p>
-                <p class="weather-condition-today" id="condition-display"></p>
+          </div>
+
+          <div class="info2-details" id="info2-column2-row1">
+            <div class="info2-icon">
+              <img src="icons/wind.png" />
             </div>
-            <div class="container-info2-today">
-                <div class="info2-details" id="info2-column1-row1">
-                    <div class="info2-icon">
-                        <img src="icons/tshirt.png">
-                    </div>
-                    <div>
-                        <p class="info2-details-header">Feels like</p>
-                        <p class="info2-details-text" id="display-feels-like"></p>
-                    </div>
-                </div>
-
-                <div class="info2-details" id="info2-column2-row1">
-                    <div class="info2-icon">
-                        <img src="icons/wind.png">
-                    </div>
-                    <div>
-                        <p class="info2-details-header">Wind Speed</p>
-                        <p class="info2-details-text" id="display-wind-speed"></p>
-                    </div>
-                </div>
-
-                <div class="info2-details" id="info2-column1-row2">
-                    <div class="info2-icon">
-                        <img src="icons/visibility.png">
-                    </div>
-                    <div>
-                        <p class="info2-details-header">Visibility</p>
-                        <p class="info2-details-text" id="display-visibility"></p>
-                    </div>
-                </div>
-
-                <div class="info2-details" id="info2-column2-row2">
-                    <div class="info2-icon">
-                        <img src="icons/humidity.png">
-                    </div>
-                    <div>
-                        <p class="info2-details-header">Humidity</p>
-                        <p class="info2-details-text" id="display-humidity"></p>
-                    </div>
-                </div>
+            <div>
+              <p class="info2-details-header">Wind Speed</p>
+              <p class="info2-details-text" id="display-wind-speed"></p>
             </div>
+          </div>
+
+          <div class="info2-details" id="info2-column1-row2">
+            <div class="info2-icon">
+              <img src="icons/visibility.png" />
+            </div>
+            <div>
+              <p class="info2-details-header">Visibility</p>
+              <p class="info2-details-text" id="display-visibility"></p>
+            </div>
+          </div>
+
+          <div class="info2-details" id="info2-column2-row2">
+            <div class="info2-icon">
+              <img src="icons/humidity.png" />
+            </div>
+            <div>
+              <p class="info2-details-header">Humidity</p>
+              <p class="info2-details-text" id="display-humidity"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-right">
+        <div class="container-menu">
+          <div class="container-search-bar">
+            <img src="icons/search.svg" alt="" />
+            <input
+              type="text"
+              name="location"
+              id="location-search"
+              placeholder="Search for location..."
+            />
+            <button type="submit" id="get-weather"></button>
+          </div>
+
+          <div class="container-temperature-metric">
+            <div class="container-metric-choice" id="toggle-celsius">
+              <img src="icons/thermometer-glass-celsius.png" />
+              <p>Celsius</p>
+            </div>
+            <div class="container-metric-choice" id="toggle-fahrenheit">
+              <img src="icons/thermometer-glass-fahrenheit.png" />
+              <p>Fahrenheit</p>
+            </div>
+          </div>
         </div>
 
-        <div class="content-right">
-            <div class="container-menu">
-                <div class="container-search-bar">
-                    <img src="icons/search.svg" alt="">
-                    <input type="text" name="location" id="location-search" placeholder="Search for location..." />
-                    <button type="submit" id="get-weather"></button>
-                </div>
-
-                <div class="container-temperature-metric">
-                    <div class="container-metric-choice" id="toggle-celsius">
-                        <img src="icons/thermometer-glass-celsius.png">
-                        <p>Celsius</p>
-                    </div>
-                    <div class="container-metric-choice" id="toggle-fahrenheit">
-                        <img src="icons/thermometer-glass-fahrenheit.png">
-                        <p>Fahrenheit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="headline-weekly-forecast">
-                <h2>Weekly Forecast</h2>
-            </div>
-
-            <div id="container-weekly-forecast"></div>
-
-            <div class="headline-details-today">
-                <h2>Details for Today</h2>
-            </div>
-
-            <div id="container-details-today-row1">
-                <div class="container-details-today">
-                    <p class="details-today-header">Sunrise</p>
-                    <img src="icons/sunrise.png">
-                    <p class="info-text-today-details" id="display-sunrise"></p>
-                </div>
-                <div class="container-details-today">
-                    <p class="details-today-header">Sunset</p>
-                    <img src="icons/sunset.png">
-                    <p class="info-text-today-details" id="display-sunset"></p>
-                </div>
-                <div class="container-details-today">
-                    <p class="details-today-header">Highest Temperature</p>
-                    <img src="icons/thermometer-warmer.png">
-                    <p class="info-text-today-details" id="display-highest-temp"></p>
-                </div>
-                <div class="container-details-today">
-                    <p class="details-today-header">Lowest Temperature</p>
-                    <img src="icons/thermometer-colder.png">
-                    <p class="info-text-today-details" id="display-lowest-temp"></p>
-                </div>
-            </div>
-
-            <div id="container-details-today-row2">
-                <div class="container-details-today">
-                    <p class="details-today-header">Precipation Probability</p>
-                    <img src="icons/raindrop.png">
-                    <p class="info-text-today-details" id="display-precip-prob"></p>
-                </div>
-                <div class="container-details-today">
-                    <p class="details-today-header">Total Precipation </p>
-                    <img src="icons/raindrops.png">
-                    <p class="info-text-today-details" id="display-precip-total"></p>
-                </div>
-                <div class="container-details-today">
-                    <p class="details-today-header">UV Index</p>
-                    <img src="icons/uv-index-1.png" id="display-uv-index">
-                </div>
-                <div class="container-details-today">
-                    <p class="details-today-header">Info</p>
-                    <p class="info-text-today-description" id="display-description"></p>
-                </div>
-            </div>
+        <div class="headline-weekly-forecast">
+          <h2>Weekly Forecast</h2>
         </div>
+
+        <div id="container-weekly-forecast"></div>
+
+        <div class="headline-details-today">
+          <h2>Details for Today</h2>
+        </div>
+
+        <div id="container-details-today-row1">
+          <div class="container-details-today">
+            <p class="details-today-header">Sunrise</p>
+            <img src="icons/sunrise.png" />
+            <p class="info-text-today-details" id="display-sunrise"></p>
+          </div>
+          <div class="container-details-today">
+            <p class="details-today-header">Sunset</p>
+            <img src="icons/sunset.png" />
+            <p class="info-text-today-details" id="display-sunset"></p>
+          </div>
+          <div class="container-details-today">
+            <p class="details-today-header">Highest Temperature</p>
+            <img src="icons/thermometer-warmer.png" />
+            <p class="info-text-today-details" id="display-highest-temp"></p>
+          </div>
+          <div class="container-details-today">
+            <p class="details-today-header">Lowest Temperature</p>
+            <img src="icons/thermometer-colder.png" />
+            <p class="info-text-today-details" id="display-lowest-temp"></p>
+          </div>
+        </div>
+
+        <div id="container-details-today-row2">
+          <div class="container-details-today">
+            <p class="details-today-header">Precipation Probability</p>
+            <img src="icons/raindrop.png" />
+            <p class="info-text-today-details" id="display-precip-prob"></p>
+          </div>
+          <div class="container-details-today">
+            <p class="details-today-header">Total Precipation</p>
+            <img src="icons/raindrops.png" />
+            <p class="info-text-today-details" id="display-precip-total"></p>
+          </div>
+          <div class="container-details-today">
+            <p class="details-today-header">UV Index</p>
+            <img src="icons/uv-index-1.png" id="display-uv-index" />
+          </div>
+          <div class="container-details-today">
+            <p class="details-today-header">Info</p>
+            <p class="info-text-today-description" id="display-description"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

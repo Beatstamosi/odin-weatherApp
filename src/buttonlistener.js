@@ -1,34 +1,34 @@
 import fetchWeatherData from "./fetchAPI";
 import { setIcon } from "./renderInfo";
 
-const locationHandling = function() {
+const locationHandling = (function () {
   let currentLocation;
   let unit = "metric";
 
   const setLocation = () => {
     const input = document.querySelector("#location-search");
     currentLocation = input.value;
-  }
+  };
 
   const getLocation = () => {
-    return currentLocation
-  }
+    return currentLocation;
+  };
 
   const setUnit = (indicator) => {
     unit = indicator === "celsius" ? "metric" : "us";
-  }
+  };
 
   const getUnit = () => {
     return unit;
-  }
+  };
 
   return {
     setLocation,
     getLocation,
     setUnit,
-    getUnit
-  }
-}();
+    getUnit,
+  };
+})();
 
 export default function addButtonListenerGetWeather() {
   const submitBtn = document.querySelector("#get-weather");
@@ -36,7 +36,6 @@ export default function addButtonListenerGetWeather() {
   const celsiusBtn = document.querySelector("#toggle-celsius");
   const fahrenheitBtn = document.querySelector("#toggle-fahrenheit");
   let indicator;
-  
 
   submitBtn.addEventListener("click", () => {
     // initialize first fetch with Celsius Data
@@ -74,23 +73,31 @@ export default function addButtonListenerGetWeather() {
 }
 
 function prepareFetch() {
-    locationHandling.setLocation();
-    let location = locationHandling.getLocation();
-    let unit = locationHandling.getUnit();
-    fetchWeatherData(location, unit);
+  locationHandling.setLocation();
+  let location = locationHandling.getLocation();
+  let unit = locationHandling.getUnit();
+  fetchWeatherData(location, unit);
 }
 
 function styleUnitBtn(celsiusBtn, fahrenheitBtn, indicator) {
-    const textCelsius = celsiusBtn.querySelector("p");
-    const textFahrenheit = fahrenheitBtn.querySelector("p");
-    const imgCelsius = celsiusBtn.querySelector("img");
-    const imgFahrenheit = fahrenheitBtn.querySelector("img");
-    let imgNameCelsius = indicator === "celsius" ? "thermometer-celsius" : "thermometer-glass-celsius";
-    let imgNameFahrenheit = indicator === "fahrenheit" ? "thermometer-fahrenheit" : "thermometer-glass-fahrenheit";
+  const textCelsius = celsiusBtn.querySelector("p");
+  const textFahrenheit = fahrenheitBtn.querySelector("p");
+  const imgCelsius = celsiusBtn.querySelector("img");
+  const imgFahrenheit = fahrenheitBtn.querySelector("img");
+  let imgNameCelsius =
+    indicator === "celsius"
+      ? "thermometer-celsius"
+      : "thermometer-glass-celsius";
+  let imgNameFahrenheit =
+    indicator === "fahrenheit"
+      ? "thermometer-fahrenheit"
+      : "thermometer-glass-fahrenheit";
 
-    setIcon(imgNameCelsius, imgCelsius);
-    setIcon(imgNameFahrenheit, imgFahrenheit);
+  setIcon(imgNameCelsius, imgCelsius);
+  setIcon(imgNameFahrenheit, imgFahrenheit);
 
-    textCelsius.style.color = indicator === "celsius" ? "black" : "rgb(165, 163, 163)";
-    textFahrenheit.style.color = indicator === "fahrenheit" ? "black" : "rgb(165, 163, 163)";
+  textCelsius.style.color =
+    indicator === "celsius" ? "black" : "rgb(165, 163, 163)";
+  textFahrenheit.style.color =
+    indicator === "fahrenheit" ? "black" : "rgb(165, 163, 163)";
 }

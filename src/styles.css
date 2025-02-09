@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 16px;
   height: 100vh;
 }
@@ -35,7 +35,6 @@ body {
   grid-column: 2;
   background-color: var(--lightGray);
 }
-
 
 /* CONTENT LEFT */
 #weather-icon-day {
@@ -83,7 +82,10 @@ body {
   gap: 30px;
 }
 
-#info2-column1-row1, #info2-column2-row1, #info2-column1-row2, #info2-column2-row2 {
+#info2-column1-row1,
+#info2-column2-row1,
+#info2-column1-row2,
+#info2-column2-row2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +137,6 @@ body {
   width: 30px;
 }
 
-
 /* CONTENT RIGHT */
 .content-right {
   display: grid;
@@ -165,7 +166,7 @@ body {
   border: none;
   width: 400px;
   font-size: 1em;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 #location-search:focus {
@@ -213,7 +214,8 @@ body {
   color: var(--grey);
 }
 
-.headline-weekly-forecast h2, .headline-details-today h2 {
+.headline-weekly-forecast h2,
+.headline-details-today h2 {
   font-size: 1em;
   color: var(--grey);
   padding-top: 10px;
@@ -266,7 +268,8 @@ body {
   margin-top: 50px;
 }
 
-#container-details-today-row1, #container-details-today-row2 {
+#container-details-today-row1,
+#container-details-today-row2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -297,5 +300,3 @@ body {
   font-size: 1.5em;
   font-weight: bold;
 }
-
-
