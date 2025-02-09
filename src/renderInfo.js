@@ -1,4 +1,4 @@
-export default function renderInfo(data) {
+export default function renderInfo(data, unit) {
     // Daily Info
     const locationDisplay = document.querySelector("#location-display");
     locationDisplay.textContent = data.location;
@@ -19,12 +19,12 @@ export default function renderInfo(data) {
     feelsLikeDisplay.textContent = `${data.today.feelslike}°`;
 
     const displayWindSpeed = document.querySelector("#display-wind-speed");
-    displayWindSpeed.textContent = data.today.windspeed;
-    // TODO: Add km/h or miles depending on metric system
+    let displayWindUnit = unit === "metric" ? "km/h" : "miles/h";
+    displayWindSpeed.textContent = `${data.today.windspeed} ${displayWindUnit}`;
 
     const displayVisibility = document.querySelector("#display-visibility");
-    displayVisibility.textContent = data.today.visibility;
-    // TODO: Add proper metric system
+    let displayVisibilityUnit = unit === "metric" ? "km" : "miles";
+    displayVisibility.textContent = `${data.today.visibility} ${displayVisibilityUnit}`;
 
     const displayHumidity = document.querySelector("#display-humidity");
     displayHumidity.textContent = `${data.today.humidity}%`;
@@ -45,7 +45,8 @@ export default function renderInfo(data) {
     displayPrecipProb.textContent =  `${data.today.precipprob}%`;
 
     const displayPrecipTotal = document.querySelector("#display-precip-total");
-    displayPrecipTotal.textContent = `${data.today.precip}mm`;
+    let displayPrecibTotalUnit = unit === "metric" ? "mm" : "inches";
+    displayPrecipTotal.textContent = `${data.today.precip} ${displayPrecibTotalUnit}`;
 
     const displayUVIndex = document.querySelector("#display-uv-index");
     let UVIndex = data.today.uvindex !== "0" ? data.today.uvindex : "1";

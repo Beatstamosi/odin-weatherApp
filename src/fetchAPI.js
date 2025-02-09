@@ -11,7 +11,7 @@ export default async function fetchWeatherData(location, unit) {
 
         console.log(processWeatherData(json));
         let formattedData = processWeatherData(json);
-        renderInfo(formattedData);
+        renderInfo(formattedData, unit);
 
     } catch (error) {
         console.log(error);
