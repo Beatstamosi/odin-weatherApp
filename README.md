@@ -1,16 +1,4 @@
-### Basic Webpack Template
+### Weather App
 
-Clone and run npm install to set up.
-
-Includes:
-
-- CSS Style Loader & CSS - Loader
-- HTML Load
-- Javascript Image Loader
-- eslint
-- prettier
-
-Script Commands:
-"build": "webpack",
-"dev": "webpack serve",
-"deploy": "git subtree push --prefix dist origin gh-pages"
+My take on the "Weather App Project" from TOP.
+https://www.theodinproject.com/lessons/node-path-javascript-weather-app
