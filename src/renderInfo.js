@@ -110,7 +110,7 @@ function formatDate(dateString) {
   }
 
 
-function setIcon(imageName, icon) {
+export function setIcon(imageName, icon) {
     const icons = getIcons();
     
     let imagePath = icons[imageName];

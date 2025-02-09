@@ -210,6 +210,7 @@ body {
 
 .container-metric-choice p {
   font-weight: bold;
+  color: var(--grey);
 }
 
 .headline-weekly-forecast h2, .headline-details-today h2 {
